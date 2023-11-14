@@ -13,29 +13,41 @@ class Form2(Form2Template):
     # Any code you write here will run before the form opens.
 
    
-    self.user_id = []
-    self.name = []
-    self.password = []
-    self.mobile_no = []
-    self.mail_id = []
-    self.pincode = []
+    self.customer_id = []
+    self.email_id = []
+    self.full_name = []
+    self.intrest_rate = []
+    self.loan_id = []
+    self.loan_status = []
+    self.max_amount = []
+    self.min_amount = []
+    self.tenure = []
+    self.total_repayment = []
     
 
-    data = tables.app_tables.users.search()
+    data = tables.app_tables.loan_details.search()
     for row in data:
-      self.user_id.append(row['user_id'])
-      self.name.append(row['name'])
-      self.password.append(row['passward'])
-      self.mobile_no.append(row['mobile_no'])
-      self.mail_id.append(row['mail_id'])
-      self.pincode.append(row['pincode'])
+      self.customer_id.append(row['customer_id'])
+      self.email_id.append(row['email_id'])
+      self.full_name.append(row['full_name'])
+      self.intrest_rate.append(row['intrest_rate'])
+      self.loan_id.append(row['loan_id'])
+      self.loan_status.append(row['loan_status'])
+      self.max_amount.append(row['max_amount'])
+      self.min_amount.append(row['min_amount'])
+      self.tenure.append(row['tenure'])
+      self.total_repayment.append(row['total_repayment'])
       
     
-    self.label_3.text = self.user_id[-1]
-    self.label_5.text = self.name[-1]
-    self.label_7.text = self.password[-1]
-    self.label_9.text = self.mobile_no[-1]
-    self.label_11.text = self.mail_id[-1]
-    self.label_13.text = self.pincode[-1]
-    print(self.pincode)
+    self.label_2.text = self.customer_id[-1]
+    self.label_13.text = self.email_id[-1]
+    self.label_14.text = self.full_name[-1]
+    self.label_15.text = self.intrest_rate[-1]
+    self.label_16.text = self.loan_id[-1]
+    self.label_17.text = self.loan_status[-1]
+    self.label_18.text = self.max_amount[-1]
+    self.label_19.text = self.min_amount[-1]
+    self.label_20.text = self.tenure[-1]
+    self.label_21.text = self.total_repayment[-1]
+    print(self.total_repayment)
 
