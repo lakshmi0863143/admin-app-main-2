@@ -47,7 +47,7 @@ class Form4(Form4Template):
       self.label_18.text = self.min_amount[-1]
       self.label_19.text = self.tenure[-1]
       self.label_20.text = self.total_repayment[-1]
-      print(self.total_repayment)
+      print('self.total_repayment')
 
     self.customer_id = self.label_11.text
     self.email_id = self.label_12.text
