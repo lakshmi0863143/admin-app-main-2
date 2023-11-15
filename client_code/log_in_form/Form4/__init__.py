@@ -21,7 +21,7 @@ class Form4(Form4Template):
     self.max_amount = []
     self.min_amount = []
     self.tenure = []
-    self.total_repayment = [properties]
+    self.total_repayment = []
     
     data = tables.app_tables.loan_details.search()
     for row in data:
