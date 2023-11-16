@@ -143,6 +143,10 @@ components:
     name: button_3
     layout_properties: {grid_position: 'HJBXVS,CVNJWZ'}
     event_bindings: {click: button_3_click}
+  - type: Label
+    properties: {}
+    name: label_22
+    layout_properties: {grid_position: 'UNAGAC,XBBXSX'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
