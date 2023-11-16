@@ -1,0 +1,27 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {column: VLYMKD}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {column: RMUBSH}
+- type: Label
+  properties: {}
+  name: label_3
+  layout_properties: {column: DDICJV}
+- type: Label
+  properties: {}
+  name: label_4
+  layout_properties: {column: COOGYI}
+- type: Label
+  properties: {}
+  name: label_5
+  layout_properties: {column: QCCTWW}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: TQTUCP}
+is_package: true
