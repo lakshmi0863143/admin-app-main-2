@@ -4,7 +4,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: log_in_form.Form6}
+startup: {type: form, module: Log_in_Home.Form9}
 package_name: Admin_app
 allow_embedding: false
 name: admin-app-main
@@ -188,4 +188,18 @@ db_schema:
       admin_ui: {width: 200, order: 1}
       type: string
     title: lender
+  product_details:
+    client: none
+    server: full
+    columns:
+    - name: product_id
+      admin_ui: {width: 200, order: 0}
+      type: number
+    - name: product_name
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: product_discription
+      admin_ui: {width: 200, order: 2}
+      type: string
+    title: product_details
 renamed: true
