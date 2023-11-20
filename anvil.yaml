@@ -154,9 +154,6 @@ db_schema:
     - name: product_name
       admin_ui: {width: 200, order: 1}
       type: string
-    - name: product_discription
-      admin_ui: {order: 2, width: 200}
-      type: string
     - name: product_categories
       admin_ui: {width: 200, order: 3}
       type: string

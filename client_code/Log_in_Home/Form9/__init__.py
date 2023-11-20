@@ -25,7 +25,10 @@ class Form9(Form9Template):
     membership_type = self.drop_down_2.selected_value
     print(membership_type)
     interest_type = self.radio_button_1.selected
-    print(interest_type)
+    if interest_type :
+      print(self.radio_button_1.text)
+    else :
+      print(self.radio_button_2.text)
     min_days = self.drop_down_3.selected_value
     print(min_days)
     max_days = self.drop_down_4.selected_value
@@ -33,8 +36,19 @@ class Form9(Form9Template):
     roi = self.text_box_5.text
     print(roi)
 
-    if product_id == "" or product_name == "" or membership_type == "" or processing_fee == "" or extension_fee == "" or product_discription == "" or interest_type == "" or max_days == "" or min_days == "" or product_categories == "" or discount_coupons == "" or roi == "":
+    if product_id == "" or product_name == "" or membership_type == "" or processing_fee == "" or extension_fee == "" or interest_type == "" or max_days == "" or min_days == "" or product_categories == "" or discount_coupons == "" or roi == "":
       Notification("Fill All Required Details").show()
     else:
-      anvil.server.call('product_details',product_id,product_name,membership_type,processing_fee,extension_fee,product_discription,interest_type,max_days,min_days,product_categories,discount_coupons,roi)
+      anvil.server.call('product_details',
+                        product_id,
+                        product_name,
+                        membership_type,
+                        processing_fee,
+                        extension_fee,
+                        interest_type,
+                        max_days,
+                        min_days,
+                        product_discription,
+                        discount_coupons,
+                        roi)
       alert("Submitted succesfully")
