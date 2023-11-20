@@ -66,3 +66,19 @@ def lender(customer_id, email_id):
   app_tables.lender.add_row(customer_id=customer_id,
                             email_id=email_id
                            )
+
+@anvil.server.callable
+def product_details(product_id, product_name, product_description, product_categories, membership_type, processing_fee, extension_fee, interest_type, discount_coupons, min_days, max_days, roi):
+  app_tables.product_details.add_row(product_id=product_id,
+                                     product_name=product_name,
+                                     product_description=product_description,
+                                     product_categories=product_categories,
+                                     membership_type=membership_type,
+                                     processing_fee=processing_fee,
+                                     extension_fee=extension_fee,
+                                     interest_type=interest_type,
+                                     discount_coupons=discount_coupons,
+                                     min_days=min_days,
+                                     max_days=max_days,
+                                     roi=roi)
+                                    
