@@ -73,7 +73,8 @@ components:
               type: text, spacing_below: small, italic: false, background: '', bold: false,
               underline: false}
             name: text_box_1
-            layout_properties: {x: 177, y: 78, width: 221}
+            layout_properties: {x: 177, y: 78, width: 153.8}
+            event_bindings: {hide: text_box_1_hide}
           - type: TextBox
             properties: {role: outlined, align: left, hide_text: false, tooltip: '',
               placeholder: 'Enter your Product Name ', border: '', enabled: true,
