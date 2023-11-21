@@ -50,14 +50,39 @@ class Form11(Form11Template):
     if product_visibility :
      self.text_box_1.visible = True
      self.text_box_2.visible = True
-     self.text_area_1.visible = 
-     self.drop_down_1.visible =
-     self.
+     self.text_area_1.visible = True
+     self.drop_down_1.visible = True
+     self.text_box_3.visible = True
+     self.text_box_4.visible = True
+     self.drop_down_2.visible = True
+     self.radio_button_1.visible = True
+     self.radio_button_2.visible = True
+     self.drop_down_3.visible = True
+     self.drop_down_4.visible = True
+     self.text_box_5.visible = True
+     self.radio_button_3.visible = True
+     self.radio_button_4.visible = True
+     self.check_box_1.visible = True
+     self.check_box_2.visible = True
      
 
     else:
      self.text_box_1.visible = False
-
+     self.text_box_2.visible = False
+     self.text_area_1.visible = False
+     self.drop_down_1.visible = False
+     self.text_box_3.visible = False
+     self.text_box_4.visible = False
+     self.drop_down_2.visible = False
+     self.radio_button_1.visible = False
+     self.radio_button_2.visible = False
+     self.drop_down_3.visible = False
+     self.drop_down_4.visible = False
+     self.text_box_5.visible = False
+     self.radio_button_3.visible = False
+     self.radio_button_4.visible = False
+     self.check_box_1.visible = False
+     self.check_box_2.visible = False
     
  
 
