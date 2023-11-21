@@ -16,6 +16,7 @@ class Form11(Form11Template):
     
 
     product_id = int(self.text_box_1.text)
+    self.text_box_1.product_id = "unique_id_for_text_box"
     product_name = self.text_box_2.text
     product_categories = self.drop_down_1.selected_value
     processing_fee = int(self.text_box_3.text)
@@ -79,6 +80,13 @@ class Form11(Form11Template):
      self.radio_button_4.visible = False
      self.check_box_1.visible = False
      self.check_box_2.visible = False
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Log_in_Home.Form11.update_form')
+    
+      
+      
     
  
 

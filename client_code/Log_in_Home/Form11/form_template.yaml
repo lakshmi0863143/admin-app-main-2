@@ -377,6 +377,7 @@ components:
               icon: ''}
             name: button_2
             layout_properties: {x: 334, y: 957, width: 360}
+            event_bindings: {click: button_2_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
