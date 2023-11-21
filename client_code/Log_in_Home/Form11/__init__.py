@@ -55,7 +55,7 @@ class Form11(Form11Template):
       self.text_box_3.text = self.visible
       self.text_box_4.text = self.visible
       self.drop_down_2.selected_value = self.visible
-      self.radio_button_1.selected
+      self.radio_button_1.selected = 
       self.drop_down_3.selected_value
       self.drop_down_4.selected_value
       self.text_box_5.text
