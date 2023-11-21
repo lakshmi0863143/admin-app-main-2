@@ -38,9 +38,7 @@ class Form11(Form11Template):
     print(max_days)
     roi = int(self.text_box_5.text)
     print(roi)
-    
 
-    
     anvil.server.call('product_details', product_id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
     alert("Submitted succesfully")
 
@@ -64,8 +62,6 @@ class Form11(Form11Template):
      self.radio_button_4.visible = True
      self.check_box_1.visible = True
      self.check_box_2.visible = True
-     
-
     else:
      self.text_box_1.visible = False
      self.text_box_2.visible = False

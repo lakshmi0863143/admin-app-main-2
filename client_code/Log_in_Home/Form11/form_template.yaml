@@ -40,10 +40,10 @@ components:
             grid_position: CXRQEH,GXLQYB
         - type: Link
           properties: {role: null, url: '', align: right, tooltip: '', border: '',
-            foreground: Blue, visible: true, text: 'Home   ', font_size: null, wrap_on: mobile,
-            font: '', col_spacing: medium, spacing_above: small, icon_align: left,
-            col_widths: '', spacing_below: small, italic: false, background: '', bold: true,
-            underline: false, icon: 'fa:home'}
+            foreground: '#0876E8', visible: true, text: 'Home   ', font_size: null,
+            wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+            icon_align: left, col_widths: '', spacing_below: small, italic: false,
+            background: '', bold: true, underline: false, icon: 'fa:home'}
           name: link_1_copy
           layout_properties: {grid_position: 'CXRQEH,SLEMYG'}
           event_bindings: {click: link_1_copy_click}
@@ -299,7 +299,7 @@ components:
               layout_properties: {grid_position: 'BANSDK,AIVUAD'}
             - type: Link
               properties: {role: null, url: '', align: right, tooltip: '', border: '',
-                foreground: Blue, visible: true, text: '+Add More Interest rate ',
+                foreground: '#0876E8', visible: true, text: '+Add More Interest rate ',
                 font_size: null, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
                 icon_align: left, col_widths: '', spacing_below: small, italic: false,
                 background: '', bold: true, underline: false, icon: ''}
@@ -346,11 +346,12 @@ components:
             layout_properties: {x: 177, y: 904.050048828125, width: 443}
           - type: Button
             properties: {role: outlined-button, align: center, tooltip: '', border: '',
-              enabled: true, foreground: Black, visible: true, text: SUBMIT, font_size: null,
+              enabled: true, foreground: Black, visible: true, text: ADD, font_size: null,
               font: '', spacing_above: small, icon_align: left, spacing_below: small,
-              italic: false, background: Blue, bold: true, underline: false, icon: ''}
+              italic: false, background: '#0876E8', bold: true, underline: false,
+              icon: ''}
             name: button_1
-            layout_properties: {x: 10, y: 957, width: 699}
+            layout_properties: {x: 10, y: 957, width: 314}
             event_bindings: {click: button_1_click}
           - type: TextBox
             properties: {role: outlined, align: left, hide_text: false, tooltip: '',
@@ -364,10 +365,18 @@ components:
             properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
               foreground: '', allow_indeterminate: false, visible: true, text: Product Visibility,
               font_size: null, font: '', spacing_above: small, spacing_below: small,
-              italic: false, background: '', bold: false, checked: false, underline: false}
+              italic: false, background: '', bold: false, checked: true, underline: false}
             name: check_box_3
             layout_properties: {x: 520, y: 10, width: 165}
             event_bindings: {change: check_box_3_change}
+          - type: Button
+            properties: {role: outlined-button, align: center, tooltip: '', border: '',
+              enabled: true, foreground: black, visible: true, text: UPDATE, font_size: null,
+              font: '', spacing_above: small, icon_align: left, spacing_below: small,
+              italic: false, background: '#0876E8', bold: false, underline: false,
+              icon: ''}
+            name: button_2
+            layout_properties: {x: 334, y: 957, width: 360}
 - type: FlowPanel
   properties: {}
   name: navbar_links
