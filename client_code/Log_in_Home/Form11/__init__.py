@@ -48,18 +48,18 @@ class Form11(Form11Template):
     """This method is called when this checkbox is checked or unchecked"""
     product_visibility = self.check_box_3.checked
     if product_visibility :
-      self.text_box_1.visible
-      self.text_box_2.visible
-      self.text_area_1.visible
-      self.drop_down_1.visible
-      self.text_box_3.visible
-      self.text_box_4.visible
-      self.drop_down_2.visible
-      self.radio_button_1.visible
-      self.drop_down_3.visible
-      self.drop_down_4.visible
-      self.text_box_5.visible
-      self.radio_button_3.visible
+     self.text_box_1.visible = True
+     self.text_box_2.visible = True
+     self.text_area_1.visible = 
+     self.drop_down_1.visible =
+     self.
+     
+
+    else:
+     self.text_box_1.visible = False
+
+    
+ 
 
     
 
