@@ -1,4 +1,4 @@
-from ._anvil_designer import Form11Template
+from ._anvil_designer import manage_productsTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -6,7 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import random
 
-class Form11(Form11Template):
+class manage_products(manage_productsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -14,8 +14,8 @@ class Form11(Form11Template):
     # Any code you write here will run before the form opens.
     self.id = random.randint(1000, 9999)
     self.label_1.text = self.id
-  def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
+    
+
     
     product_name = self.text_box_2.text
     product_categories = self.drop_down_1.selected_value
@@ -37,7 +37,7 @@ class Form11(Form11Template):
     print(min_days)
     max_days = int(self.drop_down_4.selected_value)
     print(max_days)
-    roi = int(self.text_box_5.text)
+    roi = self.text_box_5.text
     print(roi)
   
     anvil.server.call('product_details', self.id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
@@ -74,6 +74,9 @@ class Form11(Form11Template):
       self.text_box_5.visible = False
       self.radio_button_3.visible = False
       self.radio_button_4.visible = False
+
+
+    
 
 
     
