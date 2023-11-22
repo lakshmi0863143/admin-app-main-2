@@ -19,8 +19,8 @@ class manage_products(manage_productsTemplate):
     
     product_name = self.text_box_2.text
     product_categories = self.drop_down_1.selected_value
-    processing_fee = int(self.text_box_3.text)
-    extension_fee = int(self.text_box_4.text)
+    processing_fee = self.text_box_3.text
+    extension_fee = self.text_box_4.text
     discount_coupons = self.radio_button_3.selected
     if discount_coupons :
       discount_coupons = self.radio_button_3.text
@@ -33,9 +33,9 @@ class manage_products(manage_productsTemplate):
       interest_type = self.radio_button_1.text
     else :
       interest_type = self.radio_button_2.text
-    min_days = int(self.drop_down_3.selected_value)
+    min_days = self.drop_down_3.selected_value
     print(min_days)
-    max_days = int(self.drop_down_4.selected_value)
+    max_days = self.drop_down_4.selected_value
     print(max_days)
     roi = self.text_box_5.text
     print(roi)
