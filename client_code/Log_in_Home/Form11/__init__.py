@@ -78,7 +78,12 @@ class Form11(Form11Template):
       self.radio_button_3.visible = False
       self.radio_button_4.visible = False
 
-      
+  def button_generate_random_number_click(self, **event_args):
+        # Call the server function to generate a random number
+    random_number = self.call_server("generate_random_number")
+
+        # Display the generated random number in the text box
+    self.text_box_random_number.text = str(random_number)
     
 
   

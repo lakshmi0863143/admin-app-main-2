@@ -80,3 +80,5 @@ def product_details(product_id, product_name, product_categories, processing_fee
                                            roi = roi,
                                            discount_coupons= discount_coupons)
 
+def generate_random_number(self):
+    return random.randint(1000, 9999)
