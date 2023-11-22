@@ -4,7 +4,6 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import time
 import random
 
 class Form11(Form11Template):
@@ -13,6 +12,8 @@ class Form11(Form11Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.id = random.randint(1000, 9999)
+    self.label_1.text = self.id
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     
@@ -38,13 +39,9 @@ class Form11(Form11Template):
     print(max_days)
     roi = int(self.text_box_5.text)
     print(roi)
-    
-
-    
-    anvil.server.call('product_details', product_id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
+  
+    anvil.server.call('product_details', self.id, product_name, product_categories, processing_fee, extension_fee, membership_type, interest_type, max_days, min_days, roi, discount_coupons)
     alert("Submitted succesfully")
-
-    
 
   def check_box_3_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
@@ -78,12 +75,7 @@ class Form11(Form11Template):
       self.radio_button_3.visible = False
       self.radio_button_4.visible = False
 
-  def button_generate_random_number_click(self, **event_args):
-        # Call the server function to generate a random number
-    random_number = self.call_server("generate_random_number")
 
-        # Display the generated random number in the text box
-    self.text_box_random_number.text = str(random_number)
     
 
   
