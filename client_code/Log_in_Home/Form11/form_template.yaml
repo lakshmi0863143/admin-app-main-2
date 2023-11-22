@@ -68,14 +68,6 @@ components:
             layout_properties: {x: 0, y: 78, width: 160}
           - type: TextBox
             properties: {role: outlined, align: left, hide_text: false, tooltip: '',
-              placeholder: Enter your Product Id, border: '', enabled: true, foreground: '',
-              visible: true, text: '', font_size: null, font: '', spacing_above: small,
-              type: text, spacing_below: small, italic: false, background: '', bold: false,
-              underline: false}
-            name: text_box_1
-            layout_properties: {x: 177, y: 78, width: 221}
-          - type: TextBox
-            properties: {role: outlined, align: left, hide_text: false, tooltip: '',
               placeholder: 'Enter your Product Name ', border: '', enabled: true,
               foreground: '', visible: true, text: '', font_size: null, font: '',
               spacing_above: small, type: text, spacing_below: small, italic: false,
@@ -367,6 +359,13 @@ components:
             name: check_box_3
             layout_properties: {x: 520, y: 10, width: 165}
             event_bindings: {change: check_box_3_change}
+          - type: TextBox
+            properties: {role: outlined, align: left, hide_text: false, tooltip: '',
+              placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+              text: '', font_size: null, font: '', spacing_above: small, type: text,
+              spacing_below: small, italic: false, background: '', bold: false, underline: false}
+            name: text_box_1
+            layout_properties: {x: 177, y: 78, width: 189}
 - type: FlowPanel
   properties: {}
   name: navbar_links

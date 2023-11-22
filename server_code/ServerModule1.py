@@ -79,3 +79,4 @@ def product_details(product_id, product_name, product_categories, processing_fee
                                            min_days = min_days,
                                            roi = roi,
                                            discount_coupons= discount_coupons)
+

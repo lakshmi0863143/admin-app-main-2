@@ -4,6 +4,8 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import time
+import random
 
 class Form11(Form11Template):
   def __init__(self, **properties):
@@ -14,8 +16,6 @@ class Form11(Form11Template):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     
-
-    product_id = int(self.text_box_1.text)
     product_name = self.text_box_2.text
     product_categories = self.drop_down_1.selected_value
     processing_fee = int(self.text_box_3.text)
