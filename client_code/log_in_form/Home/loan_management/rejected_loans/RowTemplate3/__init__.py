@@ -1,11 +1,11 @@
-from ._anvil_designer import manual_disbursementTemplate
+from ._anvil_designer import RowTemplate3Template
 from anvil import *
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class manual_disbursement(manual_disbursementTemplate):
+class RowTemplate3(RowTemplate3Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -14,4 +14,6 @@ class manual_disbursement(manual_disbursementTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('log_in_form.Home.loan_management')
+    value_to_pass = self.label_2.text
+    open_form('admin.dashboard.loan_manage', value_to_pass)
+
