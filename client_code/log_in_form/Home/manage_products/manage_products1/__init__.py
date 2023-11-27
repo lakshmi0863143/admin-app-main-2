@@ -4,7 +4,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil import server
+
 
 class manage_products1(manage_products1Template):
   def __init__(self, **properties):
@@ -33,12 +33,6 @@ class manage_products1(manage_products1Template):
       self.id = 'A'+ str(int(self.list_1[-1][1:])+1)
       self.label_1.text = self.id
 
-    self.drop_down_1_received.items = []
-
-    def init_data(self, text_data):
-        # Handle the received data and populate the dropdown
-        self.drop_down_1_received.items = [text_data]
-        self.label_received.text = f"Received data: {text_data}"
       
   def link_1_copy_click(self, **event_args):
     """This method is called when the link is clicked"""
