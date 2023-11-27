@@ -6,16 +6,12 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import app
 
-
 class manage_products1(manage_products1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    received_data = self.get_url_parameter('text_data')
-    self.label = received_data if received_data else "No data received"
-    print(self.label)
 
     
     self.id = 'A' + str(1000000)  
@@ -36,8 +32,14 @@ class manage_products1(manage_products1Template):
       self.id = 'A'+ str(int(self.list_1[-1][1:])+1)
       self.label_1.text = self.id
 
+    
+    group_name = anvil.server.call('get_group_name')
+    alert(group_name)
+        # Set the group name in the label
+    self.drop_down_1.items = group_name
 
-   
+       
+    
   def link_1_copy_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('log_in_form.Home.manage_products')
@@ -122,9 +124,3 @@ class manage_products1(manage_products1Template):
             # Add items to the dropdown dynamically
       items_to_add = ['Working capital loan', 'Term loan', 'Equipment financing loans', 'Letter of Credit', 'Loan against property', 'Point-of-Sale (POS) Loans', 'Invoice financing loans', 'Business overdraft', 'Business loans under government schemes']
       self.drop_down_5.items = items_to_add  
-   
-
-  @classmethod
-  def receive_data(cls, text_data):
-    # Use the received data as needed
-    print(f"Received data in Form2: {text_data}")
