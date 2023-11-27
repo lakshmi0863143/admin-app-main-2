@@ -81,14 +81,3 @@ def product_details(product_id, product_name, processing_fee, extension_fee, mem
                                            product_group=product_group,
                                            product_categories=product_categories)
 
-group_name = []
-
-@anvil.server.callable
-def set_group_name(group_name):
-    # Set the group name in the shared variable
-    [group_name] += [group_name]
-
-@anvil.server.callable
-def get_group_name():
-    # Return the group name from the shared variable
-    return group_name

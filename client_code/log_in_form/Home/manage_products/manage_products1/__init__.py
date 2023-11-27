@@ -32,12 +32,17 @@ class manage_products1(manage_products1Template):
       self.id = 'A'+ str(int(self.list_1[-1][1:])+1)
       self.label_1.text = self.id
 
-    
-    group_name = anvil.server.call('get_group_name')
-    alert(group_name)
-        # Set the group name in the label
-    self.drop_down_1.items = group_name
+  def form_show(self, **event_args):
+        # Retrieve the items from the URL parameters
+        items = self.get_url_parameter('items')
+        
+        if items:
+            # Set the items to drop_down_1
+            self.drop_down_1.items = items
 
+  def set_drop_down_1_value(self, value):
+        # Set the selected value of drop_down_1
+        self.drop_down_1.selected_value = value
        
     
   def link_1_copy_click(self, **event_args):
