@@ -4,17 +4,17 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+from ._anvil_designer import manage_products1Template
+from .add_groups import add_groups
 
 class manage_products1(manage_products1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-
+    self._text_value = None
+        
     # Any code you write here will run before the form opens.
-
-
-    
+   
     self.id = 'A' + str(1000000)  
     self.label_1.text = self.id
     self.data = tables.app_tables.product_details.search()
@@ -118,5 +118,5 @@ class manage_products1(manage_products1Template):
             # Add items to the dropdown dynamically
       items_to_add = ['Working capital loan', 'Term loan', 'Equipment financing loans', 'Letter of Credit', 'Loan against property', 'Point-of-Sale (POS) Loans', 'Invoice financing loans', 'Business overdraft', 'Business loans under government schemes']
       self.drop_down_5.items = items_to_add  
-   
+
 

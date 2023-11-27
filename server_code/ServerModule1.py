@@ -82,5 +82,3 @@ def product_details(product_id, product_name, processing_fee, extension_fee, mem
                                            product_categories=product_categories)
 
 
-@anvil.server.background_task
-def 
