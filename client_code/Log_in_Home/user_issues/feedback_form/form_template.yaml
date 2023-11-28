@@ -50,7 +50,7 @@ components:
     layout_properties: {grid_position: 'ACTVNO,CEXZBN'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: '  Issues', font_size: 15, font: '', spacing_above: small,
+      visible: true, text: '  Issue Name', font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
       underline: false, icon: ''}
     name: label_4
@@ -78,6 +78,7 @@ components:
       include_placeholder: true
     name: drop_down_1
     layout_properties: {grid_position: 'SJIEJR,GBINYQ'}
+    event_bindings: {change: drop_down_1_change}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: '  Specific issues ', font_size: null, font: '', spacing_above: small,
@@ -90,7 +91,7 @@ components:
       role: outlined
       align: full
       tooltip: ''
-      placeholder: ''
+      placeholder: Enter Your Specific issue
       border: ''
       enabled: true
       foreground: ''
@@ -104,7 +105,7 @@ components:
       background: ''
       bold: false
       underline: false
-      include_placeholder: false
+      include_placeholder: true
     name: drop_down_2
     layout_properties: {grid_position: 'YGKMPC,NMPISK'}
   - type: Label
