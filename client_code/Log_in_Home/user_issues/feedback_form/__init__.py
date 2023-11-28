@@ -36,19 +36,29 @@ class feedback_form(feedback_formTemplate):
     image = self.file_loader_1.file
     feedback_form = self.text_area_2.text
 
+    name = tables.app_tables.user_profile.search()
+    
+    email_user = []
+    coustmer_id = []
+
+    c = -1
+    for i in name:
+      c+=1
+      email_user.append(i['email_user'])
+      coustmer_id.append(i['coustmer_id'])
+
     
     data = tables.app_tables.user_issues_bugreports.search()
     b = -1
     for i in data:
       b+=1
 
-    if user_issues == "" or specific_issues == "" or user_discription == "" or image == "" or feedback_form == "" :
+    if user_issues == "" or specific_issues == "" or user_discription == "" or image == "" or feedback_form == ""  :
       Notification("Fill All Required Details").show()
     else:
-     anvil.server.call('user_issues_bugreports',user_issues,specific_issues,user_discription,image,feedback_form )
-     data[b]['email_user'] = self.email_user[0]
+     anvil.server.call('user_issues_bugreports',user_issues,specific_issues,user_discription,image,feedback_form,email_user[-1],str(coustmer_id[-1]))
      alert("Submited successfull")
-  
+     
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
     if self.drop_down_1.selected_value == 'Account Inquiries':

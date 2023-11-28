@@ -64,8 +64,8 @@ components:
       border: ''
       enabled: true
       foreground: ''
-      items: [Borrower Registration Form Issues, Lender registration Form Issue, Account Inquiries,
-        Loan and Mortgage Inquiries, Account Management, Financial Planning and Advice]
+      items: [Account Inquiries, Loan and Mortgage Inquiries, Account Management,
+        Financial Planning and Advice]
       visible: true
       font_size: null
       font: ''

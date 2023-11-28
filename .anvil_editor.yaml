@@ -16,7 +16,6 @@ unique_ids:
     log_in_form.Home.manage_settings.manage_facts: '1699008960083449252857088.74243'
     log_in_form.Home.loan_management.rejected_loans.view_profile_2: '1700991235552859923768746.176'
     log_in_form.Home.borrowers.RowTemplate6: '1700995407730813126852764.7142'
-    Log_in_Home.user_issues.feedback_form2.RowTemplate7: '1701172484611702589876310.2307'
     log_in_form: GUGLRS4VVV3FBLZUMSK4OE75PW55BHQW
     log_in_form.Home.loan_management.approved_loans: '1700989102210788946947726.7357'
     log_in_form.Home.manage_settings.manage_membership: '1699008921737741791321030.3928'
@@ -37,7 +36,6 @@ unique_ids:
     log_in_form.Home.borrowers.view_profile.update_form: '1701018232693403365201405.6641'
     log_in_form.Home.lenders.RowTemplate5: '1701018594578507376100785.5355'
     Log_in_Home: '1698727115891669303119860.9404'
-    Log_in_Home.user_issues.feedback_form2.ItemTemplate1: '1701172472805385738348133.4502'
     log_in_form.Home.manage_products: '1698510531650695240800375.4204'
     log_in_form.Home.loan_management.rejected_loans.RowTemplate3: '1700990906654891670182752.1731'
     log_in_form.Home.manage_settings.manage_roi: '1698728518958724320447228.9803'

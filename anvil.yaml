@@ -54,7 +54,7 @@ db_schema:
       type: string
     title: product_details
   user_profile:
-    client: none
+    client: full
     server: full
     columns:
     - name: coustmer_id
@@ -364,14 +364,14 @@ db_schema:
       type: string
     title: admin_teams
   user_issues_bugreports:
-    client: none
+    client: full
     server: full
     columns:
-    - name: user_id
-      admin_ui: {width: 200, order: 0}
+    - name: coustmer_id
+      admin_ui: {order: 0, width: 200}
       type: string
-    - name: email_id
-      admin_ui: {width: 200, order: 1}
+    - name: email_user
+      admin_ui: {order: 1, width: 200}
       type: string
     - name: user_issues
       admin_ui: {width: 200, order: 2}
@@ -384,6 +384,9 @@ db_schema:
       type: media
     - name: feedback_form
       admin_ui: {width: 200, order: 5}
+      type: string
+    - name: specific_issue
+      admin_ui: {width: 200, order: 1.5}
       type: string
     title: user_issues_bugreports
   loan_details:

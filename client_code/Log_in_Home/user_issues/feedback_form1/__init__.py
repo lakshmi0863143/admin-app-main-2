@@ -61,3 +61,7 @@ class feedback_form1(feedback_form1Template):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('bank_users.main_form')
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('log_in_form.Home.admin_teams')
