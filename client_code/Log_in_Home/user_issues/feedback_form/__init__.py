@@ -19,12 +19,20 @@ class feedback_form(feedback_formTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     user_issues = self.drop_down_1.selected_value
+    specific_issues = self.drop_down_2.selected_value
     user_discription = self.text_area_1.text
     image = self.file_loader_1.file
     feedback_form = self.text_area_2.text
 
+    if product_name == "" or membership_type == "" or processing_fee == "" or extension_fee == "" or interest_type == "" or max_days == "" or min_days == ""  or discount_coupons == "" or roi == "" or product_group == "" or product_categories == "" :
+      Notification("Fill All Required Details").show()
+    else:
+     anvil.server.call('product_details', self.id,product_name,processing_fee,extension_fee,membership_type,interest_type,max_days,min_days,roi,discount_coupons,product_group,product_categories)
+     alert("Submited successfull")
+     open_form('log_in_form.Home.manage_products')
+ 
+ 
   
-
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
     if self.drop_down_1.selected_value == 'Account Inquiries':

@@ -81,3 +81,10 @@ def product_details(product_id, product_name, processing_fee, extension_fee, mem
                                            product_group=product_group,
                                            product_categories=product_categories)
 
+@anvil.server.callable
+def user_issues_bugreports(user_issues, specific_issue, user_discription, image, feedback_form):
+ row = app_tables.user_issues_bugreports.add_row(user_issues=user_issues,
+                                                 user_discription=user_discription,
+                                                 specific_issue=specific_issue,
+                                                 image=image,
+                                                 feedback_form=feedback_form)
