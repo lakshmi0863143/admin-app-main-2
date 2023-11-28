@@ -11,10 +11,22 @@ class feedback_form(feedback_formTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.data = tables.app_tables.user_profile.search()
+    
+    self.email_user = []
+
+    a = -1
+    for i in self.data:
+      a+=1
+      self.email_user.append(i['email_user'])
+
+    if a == -1:
+      alert("No Data Available Here!!")
+    else:
+      self.label_8.text = self.email_user[a]
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('Log_in_Home')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -24,14 +36,18 @@ class feedback_form(feedback_formTemplate):
     image = self.file_loader_1.file
     feedback_form = self.text_area_2.text
 
-    if product_name == "" or membership_type == "" or processing_fee == "" or extension_fee == "" or interest_type == "" or max_days == "" or min_days == ""  or discount_coupons == "" or roi == "" or product_group == "" or product_categories == "" :
+    
+    data = tables.app_tables.user_issues_bugreports.search()
+    b = -1
+    for i in data:
+      b+=1
+
+    if user_issues == "" or specific_issues == "" or user_discription == "" or image == "" or feedback_form == "" :
       Notification("Fill All Required Details").show()
     else:
-     anvil.server.call('product_details', self.id,product_name,processing_fee,extension_fee,membership_type,interest_type,max_days,min_days,roi,discount_coupons,product_group,product_categories)
+     anvil.server.call('user_issues_bugreports',user_issues,specific_issues,user_discription,image,feedback_form )
+     data[b]['email_user'] = self.email_user[0]
      alert("Submited successfull")
-     open_form('log_in_form.Home.manage_products')
- 
- 
   
   def drop_down_1_change(self, **event_args):
     """This method is called when an item is selected"""
@@ -52,5 +68,4 @@ class feedback_form(feedback_formTemplate):
       items_to_add = ['Inquiries About Investment Options', 'Retirement Planning Assistance']
       self.drop_down_2.items = items_to_add  
 
-    
     

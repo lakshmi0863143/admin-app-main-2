@@ -1,0 +1,45 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {grid_position: 'WBTVIL,ZGWEQK'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: REPORT A BUG, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'QMUCZN,ZJVEWH'}
+- type: DataGrid
+  properties:
+    role: null
+    columns:
+    - {id: JHGCNA, title: User Issues, data_key: column_1, $$hashKey: 'object:55906'}
+    - {id: IFEPKU, title: Specific Issue, data_key: column_2, $$hashKey: 'object:55907'}
+    - {id: VAYRFO, title: User Discription, data_key: column_3, $$hashKey: 'object:55908'}
+    - {id: DZGNPK, title: Feedback Form, data_key: column_4, $$hashKey: 'object:55955'}
+    - {id: GRKDUF, title: Column 5, data_key: column_5, $$hashKey: 'object:55957'}
+    auto_header: true
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 20
+    visible: true
+    wrap_on: never
+    show_page_controls: true
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_1
+  layout_properties: {grid_position: 'QKICUV,PMCALI'}
+  components:
+  - type: RepeatingPanel
+    properties: {role: outlined-card, tooltip: '', border: '', foreground: '', items: null,
+      visible: true, spacing_above: none, spacing_below: none, item_template: Log_in_Home.user_issues.feedback_form2.RowTemplate8,
+      background: ''}
+    name: repeating_panel_1
+    layout_properties: {}
+is_package: true
