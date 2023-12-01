@@ -30,9 +30,6 @@ class manage_products1(manage_products1Template):
     else:
       self.id = 'A'+ str(int(self.list_1[-1][1:])+1)
       self.label_1.text = self.id
-
-    d = anvil.server.call('get')
-    alert(d)
    
   def link_1_copy_click(self, **event_args):
     """This method is called when the link is clicked"""
@@ -40,7 +37,6 @@ class manage_products1(manage_products1Template):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-
 
     product_name = self.text_box_2.text
     product_discription = self.text_area_1.text
@@ -78,6 +74,8 @@ class manage_products1(manage_products1Template):
       self.label_1.visible = True
       self.text_box_2.visible = True
       self.text_area_1.visible = True
+      self.drop_down_1.visible = True
+      self.drop_down_5.visible = True
       self.text_box_3.visible = True
       self.text_box_4.visible = True
       self.drop_down_2.visible = True
@@ -90,6 +88,8 @@ class manage_products1(manage_products1Template):
     else:
       self.text_box_2.visible = False
       self.text_area_1.visible = False
+      self.drop_down_1.visible = False
+      self.drop_down_5.visible = False
       self.text_box_3.visible = False
       self.text_box_4.visible = False
       self.drop_down_2.visible = False
